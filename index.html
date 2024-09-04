@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<!-- saved from url=(0098)file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./objects_files/css2" rel="stylesheet">
+
+
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Objects | Devmountain Web Development</title>
+          <link rel="stylesheet" type="text/css" href="./objects_files/bootstrap.min.css">
+          <link rel="stylesheet" type="text/css" href="./objects_files/pygments.css">
+          <link rel="stylesheet" type="text/css" href="./objects_files/styles.css">
+          <link rel="stylesheet" type="text/css" href="./objects_files/plot_directive.css">
+          <link rel="stylesheet" type="text/css" href="./objects_files/graphviz.css">
+          <link rel="stylesheet" type="text/css" href="./objects_files/tabs.css">
+          <link rel="stylesheet" type="text/css" href="./objects_files/sphinxtab.css">
+          <link rel="stylesheet" type="text/css" href="./objects_files/quickfixstyles.css">
+          <link rel="stylesheet" type="text/css" href="./objects_files/revealfix.css">
+  </head>
+  <body>
+<div></div>
+<div class="specs specs-layout mx-3 mx-md-5 d-block d-lg-grid">
+  <aside class="specs-sidebar text-muted d-none d-lg-block">
+    <strong class="d-none d-md-block h6 my-2" style="color: #3270a1"> On this page </strong>
+    <hr class="d-none d-md-block my-2" style="color: #3270A1;" "="">
+    <nav id="localtoc" class="d-none d-md-block"><ul>
+<li><a class="reference internal" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#">Objects</a><ul>
+<li><a class="reference internal" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#intro">Intro</a><ul>
+<li><a class="reference internal" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#a-fruit-stand">A Fruit Stand</a></li>
+<li><a class="reference internal" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#id1">Objects</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#id2">Objects</a><ul>
+<li><a class="reference internal" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#creating-objects">Creating Objects</a></li>
+<li><a class="reference internal" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#accessing-values">Accessing values</a></li>
+<li><a class="reference internal" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#when-to-use-bracket-notation">When to use bracket notation</a></li>
+<li><a class="reference internal" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#adding-updating-values">Adding/updating values</a></li>
+<li><a class="reference internal" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#object-syntax-flowchart">Object syntax flowchart</a></li>
+<li><a class="reference internal" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#the-delete-operator">The <code class="docutils literal notranslate"><span class="pre">delete</span></code> operator</a></li>
+<li><a class="reference internal" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#looping-through-objects">Looping through objects</a></li>
+<li><a class="reference internal" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#values-entries-and-keys">Values, entries, and keys</a></li>
+<li><a class="reference internal" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#caution-dont-use-for-in-with-arrays">Caution: Don’t use <code class="docutils literal notranslate"><span class="pre">for...in</span></code> with arrays</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#copying-and-destructuring">Copying and Destructuring</a><ul>
+<li><a class="reference internal" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#copying">Copying</a></li>
+<li><a class="reference internal" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#destructuring-arrays">Destructuring arrays</a></li>
+<li><a class="reference internal" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#destructuring-objects">Destructuring objects</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#nested-data-structures">Nested data structures</a><ul>
+<li><a class="reference internal" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#id3">Nested data structures</a></li>
+</ul>
+</li>
+<li><a class="reference internal active" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#looking-ahead">Looking Ahead</a><ul>
+<li><a class="reference internal" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#coming-up">Coming Up</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+  </aside>
+  <main class="specs-main d-block d-lg-grid">
+    <div class="specs-content"><section id="objects">
+<h1>Objects<a class="headerlink" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#objects" title="Permalink to this heading">#</a></h1>
+<p>
+To download the demo code for this lecture:</p>
+<pre class="console literal-block">$ <span class="cmd">dmget wb-objects --demo</span></pre>
+<section id="intro">
+<h2>Intro<a class="headerlink" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#intro" title="Permalink to this heading">#</a></h2>
+<section id="a-fruit-stand">
+<h3>A Fruit Stand<a class="headerlink" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#a-fruit-stand" title="Permalink to this heading">#</a></h3>
+<p>
+Say you are running a fruit stand and you want to keep track of your inventory.</p>
+<table class="table docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-right"><p>
+Fruit</p></th>
+<th class="head text-left"><p>
+Number</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p>
+Apple</p></td>
+<td class="text-left"><p>
+6</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>
+Berry</p></td>
+<td class="text-left"><p>
+12</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>
+Cherry</p></td>
+<td class="text-left"><p>
+8</p></td>
+</tr>
+</tbody>
+</table>
+<p>
+What data structure could we use for this?</p>
+<p>
+We could use parallel arrays:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">'apple'</span><span class="p">,</span><span class="w"> </span><span class="s1">'berry'</span><span class="p">,</span><span class="w"> </span><span class="s1">'cherry'</span><span class="p">];</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">fruitCounts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">6</span><span class="p">,</span><span class="w"> </span><span class="mf">12</span><span class="p">,</span><span class="w"> </span><span class="mf">8</span><span class="p">];</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li class="fragment"><p>
+How would we get the number of cherries?</p></li>
+<li class="fragment"><p>
+We’d have to find the index of <code class="docutils literal notranslate"><span class="pre">'cherry'</span></code>, then get the value at that index in <code class="docutils literal notranslate"><span class="pre">fruitCounts</span></code></p></li>
+</ul>
+<p class="mb-0">
+Wouldn’t it be nice if we could just get the value at <code class="docutils literal notranslate"><span class="pre">'cherry'</span></code>?</p>
+<div class="graphviz"><object data="./objects_files/graphviz-ffe2224767300103554dc6536bce53bb0707281f.svg" type="image/svg+xml" class="graphviz col-4">
+<p class="warning">digraph {
+  rankdir=LR
+
+  list [shape=record,label="&lt;l0&gt; 'apple'|&lt;l1&gt; 'berry'|&lt;l2&gt; 'cherry'"];
+
+  b0 [label=&lt;6&gt;];
+  b1 [label=&lt;12&gt;];
+  b2 [label=&lt;18&gt; fillcolor="yellow" style="filled" fontcolor="black"];
+
+  list:l0 -&gt; b0;
+  list:l1 -&gt; b1;
+  list:l2 -&gt; b2;
+}</p></object></div>
+<div class="fragment docutils container">
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruits</span><span class="p">[</span><span class="s1">'cherry'</span><span class="p">]);</span><span class="w">  </span><span class="c1">// 8</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id1">
+<h3>Objects<a class="headerlink" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#id1" title="Permalink to this heading">#</a></h3>
+<p>
+A collection of <strong><em>key-value pairs</em></strong></p>
+<div class="compare docutils container">
+<div class="docutils container">
+<p>
+Arrays</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="nx">value1</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">value2</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">value3</span>
+<span class="p">];</span>
+</pre></div>
+</div>
+</div>
+<div class="docutils container">
+<p>
+Objects</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">key1</span><span class="o">:</span><span class="w"> </span><span class="nx">value1</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">key2</span><span class="o">:</span><span class="w"> </span><span class="nx">value2</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">key3</span><span class="o">:</span><span class="w"> </span><span class="nx">value3</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition py-3 px-4 my-4 rounded border note">
+<p class="h5 admonition-title">
+Objects in other languages</p>
+<p>
+In other programming languages, objects can be called other things: dictionaries, maps, hash maps, etc. (In fact, “objects” in other languages
+may refer to something different). If you explore other languages, you’ll find out that most of them have a way to store collections of key-value pairs.</p>
+</div>
+<p>
+How objects differ from arrays:</p>
+<ul class="simple">
+<li class="fragment"><p>
+Look up values using keys instead of numeric indexes</p>
+<ul>
+<li><p>
+“Get the item stored at <code class="docutils literal notranslate"><span class="pre">'cherry'</span></code>” instead of “get the third item”</p></li>
+</ul>
+</li>
+<li class="fragment"><p>
+Lookup time is very fast</p>
+<ul>
+<li><p>
+We can find out if <code class="docutils literal notranslate"><span class="pre">'cherry'</span></code> is in the object right away; arrays have to loop through each item, one-by-one</p></li>
+</ul>
+</li>
+</ul>
+<div class="fragment docutils container">
+<p>
+Therefore, let’s use an object to store our fruit inventory.</p>
+</div>
+</section>
+</section>
+<section id="id2">
+<h2>Objects<a class="headerlink" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#id2" title="Permalink to this heading">#</a></h2>
+<section id="creating-objects">
+<h3>Creating Objects<a class="headerlink" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#creating-objects" title="Permalink to this heading">#</a></h3>
+<ul>
+<li class="fragment"><p>
+Objects are declared using curly braces&nbsp;<code class="docutils literal notranslate"><span class="pre">{}</span></code>.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{};</span>
+</pre></div>
+</div>
+</li>
+<li class="fragment"><p>
+Values can be any data type. Keys must be strings. Although when creating objects, you can leave off the quotes.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// These are equivalent!</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s1">'apple'</span><span class="o">:</span><span class="w"> </span><span class="mf">6</span><span class="p">,</span><span class="w"> </span><span class="s1">'berry'</span><span class="o">:</span><span class="w"> </span><span class="mf">12</span><span class="p">,</span><span class="w"> </span><span class="s1">'cherry'</span><span class="o">:</span><span class="w"> </span><span class="mf">8</span><span class="w"> </span><span class="p">};</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">apple</span><span class="o">:</span><span class="w"> </span><span class="mf">6</span><span class="p">,</span><span class="w"> </span><span class="nx">berry</span><span class="o">:</span><span class="w"> </span><span class="mf">12</span><span class="p">,</span><span class="w"> </span><span class="nx">cherry</span><span class="o">:</span><span class="w"> </span><span class="mf">8</span><span class="w"> </span><span class="p">};</span>
+</pre></div>
+</div>
+</li>
+<li class="fragment"><p>
+Keys are also referred to as <strong><em>properties</em></strong>.</p></li>
+</ul>
+</section>
+<section id="accessing-values">
+<h3>Accessing values<a class="headerlink" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#accessing-values" title="Permalink to this heading">#</a></h3>
+<p>
+The most common way to access values in an object is by using the dot (<code class="docutils literal notranslate"><span class="pre">.</span></code>) operator:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruits</span><span class="p">.</span><span class="nx">apple</span><span class="p">);</span><span class="w">  </span><span class="c1">// 6</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruits</span><span class="p">.</span><span class="nx">berry</span><span class="p">);</span><span class="w">  </span><span class="c1">// 12</span>
+</pre></div>
+</div>
+<div class="fragment docutils container">
+<p>
+You can also access values with <strong><em>bracket notation</em></strong>.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruits</span><span class="p">[</span><span class="s1">'apple'</span><span class="p">]);</span><span class="w">  </span><span class="c1">// 6</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="when-to-use-bracket-notation">
+<h3>When to use bracket notation<a class="headerlink" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#when-to-use-bracket-notation" title="Permalink to this heading">#</a></h3>
+<ul>
+<li class="fragment"><p>
+The most common use-case for bracket notation is when the key name is stored in a variable:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">fruitName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'apple'</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruits</span><span class="p">[</span><span class="nx">fruitName</span><span class="p">]);</span><span class="w"> </span><span class="c1">// 6</span>
+</pre></div>
+</div>
+</li>
+<li class="fragment"><p>
+Note that <code class="docutils literal notranslate"><span class="pre">fruits.fruitName</span></code> will <strong>NOT</strong> work here!</p>
+<ul class="simple">
+<li><p>
+This will look for a key called <code class="docutils literal notranslate"><span class="pre">'fruitName'</span></code> — it won’t treat <code class="docutils literal notranslate"><span class="pre">fruitName</span></code> as a variable.</p></li>
+</ul>
+</li>
+</ul>
+<p>
+You must also use bracket notation instead of dot notation if the key name contains a space:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">weirdFruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="s1">'star apple'</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">kumquat</span><span class="o">:</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">loganberry</span><span class="o">:</span><span class="w"> </span><span class="mf">7</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">weirdFruits</span><span class="p">[</span><span class="s1">'star apple'</span><span class="p">]);</span><span class="w"> </span><span class="c1">// 2</span>
+</pre></div>
+</div>
+</section>
+<section id="adding-updating-values">
+<h3>Adding/updating values<a class="headerlink" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#adding-updating-values" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>
+The same syntax is used to add/update values in an object.</p></li>
+</ul>
+<ul>
+<li class="fragment"><p>
+If the key exists, the value is updated.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nx">apple</span><span class="o">:</span><span class="w"> </span><span class="mf">6</span><span class="p">,</span><span class="w"> </span><span class="nx">berry</span><span class="o">:</span><span class="w"> </span><span class="mf">12</span><span class="p">,</span><span class="w"> </span><span class="nx">cherry</span><span class="o">:</span><span class="w"> </span><span class="mf">8</span><span class="p">};</span>
+
+<span class="nx">fruits</span><span class="p">.</span><span class="nx">apple</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruits</span><span class="p">);</span><span class="w"> </span><span class="c1">// { apple: 5, berry: 12, cherry: 8}</span>
+</pre></div>
+</div>
+</li>
+<li class="fragment"><p>
+If the key doesn’t exist, a new key/value pair is added.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">fruits</span><span class="p">.</span><span class="nx">dragonfruit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruits</span><span class="p">);</span><span class="w"> </span><span class="c1">// { apple: 5, berry: 12, cherry: 8, dragonfruit: 4 }</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>
+You can also add/update objects with bracket notation:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">weirdFruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s1">'star apple'</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">kumquat</span><span class="o">:</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="nx">loganberry</span><span class="o">:</span><span class="w"> </span><span class="mf">7</span><span class="p">};</span>
+
+<span class="nx">fruitsInventory</span><span class="p">[</span><span class="s1">'kumquat'</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span>
+<span class="c1">// value of 'kumquat' updated to 5</span>
+
+<span class="nx">weirdFruits</span><span class="p">[</span><span class="s1">'prickly pear'</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">weirdFruits</span><span class="p">);</span>
+<span class="c1">// {'star apple': 2, kumquat: 5, loganberry: 7, 'prickly pear': 3}</span>
+</pre></div>
+</div>
+</section>
+<section id="object-syntax-flowchart">
+<h3>Object syntax flowchart<a class="headerlink" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#object-syntax-flowchart" title="Permalink to this heading">#</a></h3>
+<div class="compare w-100 docutils container">
+<div class="text-center border docutils container">
+<p>
+Assigning a value</p>
+<div class="graphviz"><object data="./objects_files/graphviz-4c4e57a340c261ed668f496d4b8ac2f427ff23ed.svg" type="image/svg+xml" class="graphviz">
+<p class="warning">digraph {
+  rankdir="TB";
+  expr [
+    fontname="monospace"
+    label="fruits.apple = 3"
+    shape="box"
+    color="transparent"
+  ];
+
+  condition [
+    label=&lt;&lt;b&gt;does the 'apple'&lt;br&gt;&lt;/br&gt;key exist?&lt;/b&gt;&gt;
+    shape="none"
+    fillcolor="#cccccc"
+    color="transparent"
+    fontcolor="red"
+  ];
+
+  {
+    rank="same";
+    yes [label="update value\nto 3"];
+    no [label="add 'apple' key\nwith value 3"];
+  }
+
+  expr -&gt; condition [arrowhead="none"];
+  condition -&gt; yes [label="yes"];
+  condition -&gt; no [label="no"];
+}</p></object></div>
+</div>
+<div class="text-center border docutils container">
+<p>
+Accessing a value</p>
+<div class="graphviz"><object data="./objects_files/graphviz-278415743775476765019e584f96df1d7f57d028.svg" type="image/svg+xml" class="graphviz">
+<p class="warning">digraph {
+  rankdir="TB";
+  expr [
+    fontname="monospace"
+    label="fruits.apple"
+    shape=box
+    color=transparent
+  ];
+
+  condition [
+    label=&lt;&lt;b&gt;does the 'apple'&lt;br&gt;&lt;/br&gt;key exist?&lt;/b&gt;&gt;
+    shape=none
+    fillcolor="#cccccc"
+    color="transparent"
+    fontcolor="red"
+  ];
+
+  {
+    rank=same;
+    yes [label="return value\nstored at\n'apple' key"];
+    no [label="return\nundefined"];
+  }
+
+  expr -&gt; condition [arrowhead="none"];
+  condition -&gt; yes [label="yes" lp=5];
+  condition -&gt; no [label="no"];
+}</p></object></div>
+</div>
+</div>
+</section>
+<section id="the-delete-operator">
+<h3>The <code class="docutils literal notranslate"><span class="pre">delete</span></code> operator<a class="headerlink" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#the-delete-operator" title="Permalink to this heading">#</a></h3>
+<p>
+The <code class="docutils literal notranslate"><span class="pre">delete</span></code> operator removes a key-value pair from an object.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">fruitsInventory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">apple</span><span class="o">:</span><span class="w"> </span><span class="mf">6</span><span class="p">,</span><span class="w"> </span><span class="nx">berry</span><span class="o">:</span><span class="w"> </span><span class="mf">12</span><span class="p">,</span><span class="w"> </span><span class="nx">cherry</span><span class="o">:</span><span class="w"> </span><span class="mf">8</span><span class="p">,</span><span class="w"> </span><span class="nx">dragonfruit</span><span class="o">:</span><span class="w"> </span><span class="mf">4</span><span class="w"> </span><span class="p">};</span>
+
+<span class="ow">delete</span><span class="w"> </span><span class="nx">fruitsInventory</span><span class="p">.</span><span class="nx">dragonfruit</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruitsInventory</span><span class="p">);</span><span class="w">  </span><span class="c1">// { apple: 6, berry: 12, cherry: 8 }</span>
+</pre></div>
+</div>
+</section>
+<section id="looping-through-objects">
+<h3>Looping through objects<a class="headerlink" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#looping-through-objects" title="Permalink to this heading">#</a></h3>
+<p>
+You can loop through all the <strong>keys</strong> of an object with a <code class="docutils literal notranslate"><span class="pre">for...in</span></code> loop:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">const</span><span class="w"> </span><span class="nx">fruit</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">fruits</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruit</span><span class="p">,</span><span class="w"> </span><span class="nx">fruits</span><span class="p">[</span><span class="nx">fruit</span><span class="p">]);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Output</span><span class="p">:</span>
+<span class="n">apple</span> <span class="mi">6</span>
+<span class="n">berry</span> <span class="mi">12</span>
+<span class="n">cherry</span> <span class="mi">8</span>
+</pre></div>
+</div>
+<div class="fragment docutils container">
+<p>
+<code class="docutils literal notranslate"><span class="pre">for...of</span></code> does <strong>not</strong> work with objects!</p>
+</div>
+</section>
+<section id="values-entries-and-keys">
+<h3>Values, entries, and keys<a class="headerlink" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#values-entries-and-keys" title="Permalink to this heading">#</a></h3>
+<ul>
+<li class="fragment"><p>
+You can get just the <strong>values</strong> of an object with <code class="docutils literal notranslate"><span class="pre">Object.values()</span></code>:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">values</span><span class="p">(</span><span class="nx">fruitsInventory</span><span class="p">));</span><span class="w">  </span><span class="c1">// [6, 12, 8]</span>
+</pre></div>
+</div>
+</li>
+<li class="fragment"><p>
+<code class="docutils literal notranslate"><span class="pre">Object.entries()</span></code> gets you both the key and the value:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">fruit</span><span class="p">,</span><span class="w"> </span><span class="nx">num</span><span class="p">]</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nb">Object</span><span class="p">.</span><span class="nx">entries</span><span class="p">(</span><span class="nx">fruits</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruit</span><span class="p">,</span><span class="w"> </span><span class="nx">num</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li class="fragment"><p>
+There is also <code class="docutils literal notranslate"><span class="pre">Object.keys()</span></code> which gets you an array of keys.</p></li>
+</ul>
+</section>
+<section id="caution-dont-use-for-in-with-arrays">
+<h3>Caution: Don’t use <code class="docutils literal notranslate"><span class="pre">for...in</span></code> with arrays<a class="headerlink" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#caution-dont-use-for-in-with-arrays" title="Permalink to this heading">#</a></h3>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">'apple'</span><span class="p">,</span><span class="w"> </span><span class="s1">'berry'</span><span class="p">,</span><span class="w"> </span><span class="s1">'cherry'</span><span class="p">];</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">const</span><span class="w"> </span><span class="nx">f</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">fruits</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">f</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">// Output:</span>
+<span class="c1">// 0</span>
+<span class="c1">// 1</span>
+<span class="c1">// 2</span>
+</pre></div>
+</div>
+<div class="fragment docutils container">
+<p>
+If you try to loop through an array with <code class="docutils literal notranslate"><span class="pre">for...in</span></code>, you’ll actually get all the indices.</p>
+</div>
+</section>
+</section>
+<section id="copying-and-destructuring">
+<h2>Copying and Destructuring<a class="headerlink" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#copying-and-destructuring" title="Permalink to this heading">#</a></h2>
+<section id="copying">
+<h3>Copying<a class="headerlink" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#copying" title="Permalink to this heading">#</a></h3>
+<p>
+You can use the <strong><em>spread operator</em></strong> to copy both arrays and objects.</p>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">wb-objects-demo/spread.js</span><a class="headerlink" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#id4" title="Permalink to this code">#</a></div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">fruitsInventory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">apple</span><span class="o">:</span><span class="w"> </span><span class="mf">6</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">berry</span><span class="o">:</span><span class="w"> </span><span class="mf">12</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">cherry</span><span class="o">:</span><span class="w"> </span><span class="mf">8</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">inventoryCopy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="nx">fruitsInventory</span><span class="w"> </span><span class="p">};</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">inventoryCopy</span><span class="p">);</span><span class="w"> </span><span class="c1">// { apple: 6, berry: 12, cherry: 8 }</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">fruitsArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">'apple'</span><span class="p">,</span><span class="w"> </span><span class="s1">'berry'</span><span class="p">,</span><span class="w"> </span><span class="s1">'cherry'</span><span class="p">];</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">fruitsCopy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[...</span><span class="nx">fruitsArray</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruitsCopy</span><span class="p">);</span><span class="w"> </span><span class="c1">// [ 'apple', 'berry', 'cherry' ]</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition py-3 px-4 my-4 rounded border note">
+<p class="h5 admonition-title">
+More possibilities with the spread operator</p>
+<p>
+There’s lots more you can do with the spread operator. You can convert strings to arrays, merge two objects/arrays, or create a copy of an array/object that also contains additional data. There are some examples of this in your demo code.</p>
+</div>
+</section>
+<section id="destructuring-arrays">
+<h3>Destructuring arrays<a class="headerlink" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#destructuring-arrays" title="Permalink to this heading">#</a></h3>
+<p>
+We can “unpack” an array into different values using <strong><em>destructuring</em></strong> syntax:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">fruitsArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">'apple'</span><span class="p">,</span><span class="w"> </span><span class="s1">'berry'</span><span class="p">,</span><span class="w"> </span><span class="s1">'cherry'</span><span class="p">];</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">fruit0</span><span class="p">,</span><span class="w"> </span><span class="nx">fruit1</span><span class="p">,</span><span class="w"> </span><span class="nx">fruit2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fruitsArray</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruit0</span><span class="p">);</span><span class="w"> </span><span class="c1">// apple</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruit1</span><span class="p">);</span><span class="w"> </span><span class="c1">// berry</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruit2</span><span class="p">);</span><span class="w"> </span><span class="c1">// cherry</span>
+</pre></div>
+</div>
+<p>
+<code class="docutils literal notranslate"><span class="pre">Object.entries()</span></code> is another example of destructuring arrays. Each entry is an array containing the key and the value.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">fruitsInventory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">apple</span><span class="o">:</span><span class="w"> </span><span class="mf">6</span><span class="p">,</span><span class="w"> </span><span class="nx">berry</span><span class="o">:</span><span class="w"> </span><span class="mf">12</span><span class="p">,</span><span class="w"> </span><span class="nx">cherry</span><span class="o">:</span><span class="w"> </span><span class="mf">8</span><span class="w"> </span><span class="p">};</span>
+
+<span class="c1">// Object.entries(fruitsInventory) contains 3 arrays:</span>
+<span class="c1">// [['apple', 6], ['berry', 12], ['cherry', 8]]</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">fruit</span><span class="p">,</span><span class="w"> </span><span class="nx">num</span><span class="p">]</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nb">Object</span><span class="p">.</span><span class="nx">entries</span><span class="p">(</span><span class="nx">fruitsInventory</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// each array gets unpacked into 2 values, 'fruit' and 'num'</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruit</span><span class="p">,</span><span class="w"> </span><span class="nx">num</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Output</span><span class="p">:</span>
+<span class="n">apple</span> <span class="mi">6</span>
+<span class="n">berry</span> <span class="mi">12</span>
+<span class="n">cherry</span> <span class="mi">8</span>
+</pre></div>
+</div>
+</section>
+<section id="destructuring-objects">
+<h3>Destructuring objects<a class="headerlink" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#destructuring-objects" title="Permalink to this heading">#</a></h3>
+<p>
+When destructuring objects, the variable names have to match the names of the keys. Also, you can leave some of them out.</p>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">wb-js-3-demo/destructuring.js</span><a class="headerlink" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#id5" title="Permalink to this code">#</a></div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">fruitsInventory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">apple</span><span class="o">:</span><span class="w"> </span><span class="mf">6</span><span class="p">,</span><span class="w"> </span><span class="nx">berry</span><span class="o">:</span><span class="w"> </span><span class="mf">12</span><span class="p">,</span><span class="w"> </span><span class="nx">cherry</span><span class="o">:</span><span class="w"> </span><span class="mf">8</span><span class="w"> </span><span class="p">};</span>
+</pre></div>
+</div>
+</div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">apple</span><span class="p">,</span><span class="w"> </span><span class="nx">cherry</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fruitsInventory</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">apple</span><span class="p">);</span><span class="w"> </span><span class="c1">// 6</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">cherry</span><span class="p">);</span><span class="w"> </span><span class="c1">// 8</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="nested-data-structures">
+<h2>Nested data structures<a class="headerlink" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#nested-data-structures" title="Permalink to this heading">#</a></h2>
+<section id="id3">
+<h3>Nested data structures<a class="headerlink" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#id3" title="Permalink to this heading">#</a></h3>
+<p>
+Arrays and objects can be nested inside each other:</p>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">wb-objects-demo/nested.js</span><a class="headerlink" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#id6" title="Permalink to this code">#</a></div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">'apple'</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">genus</span><span class="o">:</span><span class="w"> </span><span class="s1">'Malus'</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">colors</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">'red'</span><span class="p">,</span><span class="w"> </span><span class="s1">'yellow'</span><span class="p">,</span><span class="w"> </span><span class="s1">'green'</span><span class="p">],</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">'berry'</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">genus</span><span class="o">:</span><span class="w"> </span><span class="s1">'Vaccinium'</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">colors</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">'red'</span><span class="p">,</span><span class="w"> </span><span class="s1">'blue'</span><span class="p">],</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">'cherry'</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">genus</span><span class="o">:</span><span class="w"> </span><span class="s1">'Prunus'</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">colors</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">'red'</span><span class="p">],</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">];</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Array</span><span class="p">.</span><span class="nx">isArray</span><span class="p">(</span><span class="nx">fruits</span><span class="p">));</span><span class="w"> </span><span class="c1">// true</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">fruits</span><span class="p">[</span><span class="mf">0</span><span class="p">]);</span><span class="w"> </span><span class="c1">// Object</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruits</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">colors</span><span class="p">);</span><span class="w"> </span><span class="c1">// ['red', 'yellow', 'green']</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruits</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">colors</span><span class="p">[</span><span class="mf">1</span><span class="p">]);</span><span class="w"> </span><span class="c1">// 'yellow'</span>
+</pre></div>
+</div>
+</div>
+<p>
+To iterate through a nested structure like this, we can use a <code class="docutils literal notranslate"><span class="pre">for...in</span></code> loop inside a <code class="docutils literal notranslate"><span class="pre">for...of</span></code> loop.</p>
+<div class="compare docutils container">
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">'apple'</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">genus</span><span class="o">:</span><span class="w"> </span><span class="s1">'Malus'</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">colors</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">'red'</span><span class="p">,</span><span class="w"> </span><span class="s1">'yellow'</span><span class="p">,</span><span class="w"> </span><span class="s1">'green'</span><span class="p">],</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">'berry'</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">genus</span><span class="o">:</span><span class="w"> </span><span class="s1">'Vaccinium'</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">colors</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">'red'</span><span class="p">,</span><span class="w"> </span><span class="s1">'blue'</span><span class="p">],</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">'cherry'</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">genus</span><span class="o">:</span><span class="w"> </span><span class="s1">'Prunus'</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">colors</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">'red'</span><span class="p">],</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">];</span>
+</pre></div>
+</div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// Looping through an array of objects</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">const</span><span class="w"> </span><span class="nx">fruit</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">fruits</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// fruit is an object, loop through its keys</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">const</span><span class="w"> </span><span class="nx">key</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">fruit</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="nx">fruit</span><span class="p">[</span><span class="nx">key</span><span class="p">]);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">''</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="looking-ahead">
+<h2>Looking Ahead<a class="headerlink" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#looking-ahead" title="Permalink to this heading">#</a></h2>
+<section id="coming-up">
+<h3>Coming Up<a class="headerlink" href="file:///Users/stevechait/src/webdev-curriculum/contents/lectures/wb-objects/_build/html/index.html#coming-up" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>
+Callback functions</p></li>
+<li><p>
+Making websites interactive</p></li>
+</ul>
+</section>
+</section>
+</section>
+ </div>
+  </main>
+</div>
+
+<script>
+  (() => {
+    document.querySelectorAll('.admonition-title + .admonition-title').forEach((el) => {
+      el.previousElementSibling.remove();
+    });
+  })();
+</script>
+<script data-url_root="./" id="documentation_options" src="./objects_files/documentation_options.js"></script>
+<script src="./objects_files/doctools.js"></script>
+<script src="./objects_files/sphinx_highlight.js"></script>
+<script src="./objects_files/popper.min.js"></script>
+<script src="./objects_files/bootstrap.min.js"></script>
+<script src="./objects_files/scrollspy.js"></script>
+<script src="./objects_files/revealjs-code-scroller.js"></script>
+
+</body></html>
